@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="191px" height="36px" viewBox="0 0 191 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo-black</title>
+    <defs>
+        <filter color-interpolation-filters="auto" id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.282353 0 0 0 0 0.160784 0 0 0 0 0.698039 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g filter="url(#filter-1)" id="logo-black">
+            <g>
+                <g id="Group" fill-rule="nonzero">
+                    <path d="M9.61904762,22.2857143 C4.31439599,22.2857143 0,17.9697995 0,12.6666667 C0,7.36353383 4.31540852,3.04761905 9.61904762,3.04761905 C14.9226867,3.04761905 19.2380952,7.36302757 19.2380952,12.6666667 C19.2380952,17.9703058 14.923193,22.2857143 9.61904762,22.2857143 Z M9.61904762,7.61514787 C6.82992777,7.61542751 4.56904772,9.8765343 4.56904772,12.6656542 C4.56904772,15.454774 6.82992789,17.7158808 9.61904774,17.7161604 C12.4081676,17.7164399 14.669501,15.4557865 14.6700602,12.6666667 C14.6678276,9.87783082 12.407883,7.61743318 9.61904762,7.6146416 L9.61904762,7.61514787 Z" id="Shape" fill="#000000"></path>
+                    <path d="M9.61803519,22.2857143 C4.31394189,22.2857143 0,26.6438496 0,32 L4.56957914,32 C4.56957914,29.1833478 6.83030318,26.9 9.61904762,26.9 C12.4077921,26.9 14.6685161,29.1833478 14.6685161,32 L19.2380952,32 C19.2370828,26.6428271 14.9216223,22.2857143 9.61803519,22.2857143 Z" id="Path" fill="#000000"></path>
+                    <circle id="Oval" fill="#000000" cx="19.3333333" cy="2.57142857" r="2.57142857"></circle>
+                    <path d="M0,32 L5.52380952,29.1428571 C4.93188664,29.9813278 4.61536133,30.9786069 4.61698413,32 L0,32 Z" id="Path" fill="#FFFFFF" style="mix-blend-mode: soft-light;"></path>
+                    <path d="M19.4285714,32 L14.8121828,32 C14.8139194,30.9785134 14.4971605,29.9811533 13.9047619,29.1428571 L19.4285714,32 Z" id="Path" fill="#FFFFFF" style="mix-blend-mode: soft-light;"></path>
+                </g>
+                <text id="Gurukulam" fill="#000000" fill-rule="nonzero" font-family="Metropolis-Bold, Metropolis" font-size="30" font-weight="bold">
+                    <tspan x="29.9047619" y="30">Gurukulam</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
