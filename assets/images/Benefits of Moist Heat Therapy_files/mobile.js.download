@@ -1,0 +1,246 @@
+/*
+ Opencart Mobile Theme - A fluid and responsive theme for Opencart 1.5.4.1
+ Author: Jeramy Simpson | Björn Mett | Martin Krestan
+ Author URL: http://www.mywork.com.au
+ Version: 1.1
+*/
+
+$(document).ready(function() {
+
+	//Custom Mobile Code Start
+	// Back Button
+	$('.mobile-back').click(function(){
+		window.history.back();
+	});
+
+	//resest margins for menu and search, when window is resized over set widths
+	$(window).resize(function() {
+		if(window.innerWidth>980){
+			if($(".m-menu").hasClass("active")){
+				$(".m-menu").click(); 
+			}
+		}
+		if(window.innerWidth>980){
+			if($(".m-search").hasClass("active")){
+				$(".m-search").click();
+			}
+		}
+	});
+
+	//Active States
+	if(document.URL.indexOf("/index.php?route=account") != -1){ 
+		$(".m-account").addClass("active");
+	}
+	else if(document.URL.indexOf("/index.php?route=common/allproducts") != -1){ 
+		$(".m-shop").addClass("active");
+	}
+	else if(document.URL.indexOf("/index.php?route=common/home") != -1){ 
+		$(".m-home").addClass("active");
+	}
+	else if(document.URL.indexOf("/?view=mob") != -1){ 
+		$(".m-home").addClass("active");
+	}
+	else if(document.URL == "http://" + location.hostname + "/index.php"){ 
+		$(".m-home").addClass("active");
+	}
+	else if(document.URL == "http://" + location.hostname + "/"){ 
+		$(".m-home").addClass("active");
+	}
+	
+	//Default Grid View For Devices Smaller Than 980px
+	if(window.innerWidth<980){
+		$(document).ready(function() {
+			if(typeof (window.display) == 'function') {
+				display('grid');
+			}
+		});
+	}
+
+	//Mobile Search
+	$(".m-search").click(function(){		
+		$(".m-search,#mobile-search").toggleClass("active");
+	});
+
+	$('input[name="filter_name"]').click(function(){
+		$(this).val("");
+	});
+	$('input[name="filter_name"]').keyup(function(){
+		$('input[name="filter_name"]').val($(this).val());
+	});
+
+	$('.button-search-mobi').bind('click', function() {
+		url = $('base').attr('href') + 'index.php?route=product/search';
+				 
+		var search = $('input[name=\'search-mobile\']').attr('value');
+		
+		if (search) {
+			url += '&search=' + encodeURIComponent(search);
+		}
+		
+		location = url;
+	});
+	
+	$('input[name=\'search-mobile\']').bind('keydown', function(e) {
+		if (e.keyCode == 13) {
+			url = $('base').attr('href') + 'index.php?route=product/search';
+			 
+			var search = $('input[name=\'search-mobile\']').attr('value');
+			
+			if (search) {
+				url += '&search=' + encodeURIComponent(search);
+			}
+			
+			location = url;
+		}
+	});
+
+	//Mobile Sidebar Menu
+	$(".m-menu").click(function(){
+		$(".container-site").toggleClass("active");
+		$(".m-menu").toggleClass("active");
+		$(".mobile-menu").toggleClass("active");
+		$(".mobile-menu-bg").addClass("active");
+
+	});
+	
+	$(".mobile-menu").css('left','-200px');
+	$(".mobile-menu-bg").css('left','-200px');
+	$(".m-menu").toggle(function() {
+		$('.mobile-menu').animate({ left: '0' }, { duration: 500, queue: false });
+		$('.mobile-menu-bg').animate({ left: '0' }, { duration: 500, queue: false });
+		$('.container-site').animate({ 'margin-left': '200px' }, { duration: 500, queue: false });
+		$('.container-site').animate({ 'margin-right': '-200px' }, { duration: 500, queue: false });
+	}, function() {       
+		$('.mobile-menu-bg').animate({ left: '-200' }, { duration: 500, queue: false });
+		$('.mobile-menu').animate({ left: '-200' }, { duration: 500, queue: false });
+		$('.container-site').animate({ 'margin-left': '0' }, { duration: 500, queue: false });
+		$('.container-site').animate({ 'margin-right': '0' }, { duration: 500, queue: false });
+	}
+	);
+
+	//Mobile Footer Menu
+	$("#footer .column.footer-info h3").click(function(){
+		//Add Classes
+		$("#footer .column.footer-info h3").toggleClass("active");
+		$("#footer.mobile .column.footer-info").toggleClass("active");
+		//Remove Classes
+		$("#footer .column.footer-support h3").removeClass("active");
+		$("#footer.mobile .column.footer-support").removeClass("active");
+		$("#footer .column.footer-extras h3").removeClass("active");
+		$("#footer.mobile .column.footer-extras").removeClass("active");
+		$("#footer .column.footer-account h3").removeClass("active");
+		$("#footer.mobile .column.footer-account").removeClass("active");
+	});
+	$("#footer .column.footer-support h3").click(function(){
+		//Add Classes
+		$("#footer .column.footer-support h3").toggleClass("active");
+		$("#footer.mobile .column.footer-support").toggleClass("active");
+		//Remove Classes
+		$("#footer .column.footer-info h3").removeClass("active");
+		$("#footer.mobile .column.footer-info").removeClass("active");
+		$("#footer .column.footer-extras h3").removeClass("active");
+		$("#footer.mobile .column.footer-extras").removeClass("active");
+		$("#footer .column.footer-account h3").removeClass("active");
+		$("#footer.mobile .column.footer-account").removeClass("active");
+	});
+	$("#footer .column.footer-extras h3").click(function(){
+		//Add Classes
+		$("#footer .column.footer-extras h3").toggleClass("active");
+		$("#footer.mobile .column.footer-extras").toggleClass("active");
+		//Remove Classes
+		$("#footer .column.footer-info h3").removeClass("active");
+		$("#footer.mobile .column.footer-info").removeClass("active");
+		$("#footer .column.footer-support h3").removeClass("active");
+		$("#footer.mobile .column.footer-support").removeClass("active");
+		$("#footer .column.footer-account h3").removeClass("active");
+		$("#footer.mobile .column.footer-account").removeClass("active");
+	});
+	$("#footer .column.footer-account h3").click(function(){
+		//Add Classes
+		$("#footer .column.footer-account h3").toggleClass("active");
+		$("#footer.mobile .column.footer-account").toggleClass("active");
+		//Remove Classes
+		$("#footer .column.footer-info h3").removeClass("active");
+		$("#footer.mobile .column.footer-info").removeClass("active");
+		$("#footer .column.footer-support h3").removeClass("active");
+		$("#footer.mobile .column.footer-support").removeClass("active");
+		$("#footer .column.footer-extras h3").removeClass("active");
+		$("#footer.mobile .column.footer-extras").removeClass("active");
+	});
+
+});
+
+// @Font-Face JS Compatibility Check.Override
+if (navigator.userAgent.match(/(Android (2.0|2.1))|(Nokia)|(OSRE\/)|(Opera (Mini|Mobi))|(w(eb)?OSBrowser)|(UCWEB)|(Windows Phone OS 7)|(XBLWP)|(ZuneWP)/)) {
+	var fileref=document.createElement('link');
+	fileref.setAttribute('rel', 'stylesheet');
+	fileref.setAttribute('type', 'text/css');
+	fileref.setAttribute('media', 'screen');
+	fileref.setAttribute('href', 'catalog/view/theme/default/stylesheet/font-face-override.css');
+	document.getElementsByTagName("head")[0].appendChild(fileref);
+}
+
+// Hide Header On Scroll Down And Show On Scroll Up
+	var didScroll;
+	var lastScrollTop = 0;
+	var delta = 5;
+	var navbarHeight = $('.mobile-header').outerHeight();
+
+	$(window).scroll(function(event){
+		didScroll = true;
+	});
+
+	setInterval(function() {
+		if (didScroll) {
+			hasScrolled();
+			didScroll = false;
+		}
+	}, 250);
+
+	function hasScrolled() {
+		var st = $(this).scrollTop();
+		
+		// Make sure they scroll more than delta
+		if(Math.abs(lastScrollTop - st) <= delta)
+			return;
+		
+		// If they scrolled down and are past the navbar, add class .nav-up.
+		// This is necessary so you never see what is "behind" the navbar.
+		if (st > lastScrollTop && st > navbarHeight){
+			// Scroll Down
+			$('.mobile-header').removeClass('mobile-header-show').addClass('mobile-header-hide');
+		} else {
+			// Scroll Up
+			if(st + $(window).height() < $(document).height()) {
+				$('.mobile-header').removeClass('mobile-header-hide').addClass('mobile-header-show');
+			}
+		}
+		
+		lastScrollTop = st;
+	}
+	
+	//Scroll To Top Button
+	$(document).ready(function(){
+
+		// Back To Top Button Initial Hide
+		$(".back-to-top").hide();
+		
+		// Back To Top Button Fade In
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 200) {
+					$('.back-to-top').fadeIn();
+				} else {
+					$('.back-to-top').fadeOut();
+				}
+			});
+
+			// Scroll Body To Top (0px) On Click
+			$('.back-to-top,.m-menu').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 800 + 100);// + 100 To Fix Scroll Animation For IE On Windows Phone
+				return false;
+			});
+		});
+});

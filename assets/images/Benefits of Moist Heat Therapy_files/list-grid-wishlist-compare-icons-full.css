@@ -1,0 +1,220 @@
+/**********************************************
+Grid / List Icons
+**********************************************/
+/* Styling for new icons */
+#grid_a {
+	background: url(/image/grid.png) bottom center no-repeat;
+	display: inline-block;
+	float: right;
+	height: 24px;
+	width: 25px;
+	padding: 0px;
+	margin: 0px 0px 0px 5px;
+	text-indent: -9999px;
+	position: relative;
+}
+#grid_a:hover {
+	background: url(/image/grid.png) top center no-repeat;
+}
+#grid_b {
+	background: url(/image/grid.png) top center no-repeat;
+	display: inline-block;
+	float: right;
+	height: 24px;
+	width: 25px;
+	padding: 0px;
+	margin: 0px 0px 0px 5px;
+	position: relative;
+}
+#list_a {
+	background: url(/image/list.png) bottom center no-repeat;
+	display: inline-block;
+	float: right;
+	height: 24px;
+	width: 25px;
+	padding: 0px;
+	margin: 0px 0px 0px 5px;
+	text-indent: -9999px;
+	position: relative;
+}
+#list_a:hover {
+	background: url(/image/list.png) top center no-repeat;
+}
+#list_b {
+	background: url(/image/list.png) top center no-repeat;
+	display: inline-block;
+	float: right;
+	height: 24px;
+	width: 25px;
+	padding: 0px;
+	margin: 0px 0px 0px 5px;
+	position: relative;
+}
+#grid_a:hover .title,
+#grid_b:hover .title,
+#list_a:hover .title,
+#list_b:hover .title {
+	display: block;
+	text-indent: 0px;
+}
+#grid_a .title,
+#grid_b .title,
+#list_a .title,
+#list_b .title {
+	position: absolute;
+	font-size: 10px;
+	line-height: 10px;
+	color: #888888;
+	text-align: center;
+	padding: 3px;
+	background: #ffffff;
+	border: 1px solid #dddddd;
+	top: -25px;
+	left: 12px;
+	margin-left: -29px;
+	width: 54px;
+	display: none;
+	z-index: 999;
+	text-indent: 0px;
+	font-weight: normal;
+}
+a#grid_a .title,
+a#grid_b .title,
+a#list_a .title,
+a#list_b .title {
+	font-size: 10px;
+	line-height: 10px;
+}
+/* New styling for main stylsheet */
+.product-filter {
+	padding-bottom: 5px;
+	height: 24px;
+	overflow: visible;
+}
+.product-filter .display {
+	height: 24px;
+	padding-top: 0px;
+	max-width: 115px;
+}
+.product-filter .display b {
+	margin-top: 4px;
+	display: inline-block;
+	float: left;
+}
+/**********************************************
+Wishlist / Compare Icons
+**********************************************/
+/* New styling for main stylsheet */
+.product-grid,
+.product-grid,
+.product-list,
+.product-list {
+	overflow: visible;
+}
+.product-grid .wishlist,
+.product-grid .compare,
+.product-list .wishlist,
+.product-list .compare,
+div a.product-wishlist,
+div a.product-compare {
+	margin: 0px 5px 0px 0px;
+	height: 24px;
+	width: 25px;
+	display: inline-block;
+	position: relative;
+}
+.product-grid .wishlist:hover > .title,
+.product-grid .compare:hover > .title,
+.product-list .wishlist:hover > .title,
+.product-list .compare:hover > .title,
+div a.product-wishlist:hover > .title,
+div a.product-compare:hover > .title {
+	display: block;
+}
+.product-grid .wishlist .title,
+.product-grid .compare .title,
+.product-list .wishlist .title,
+.product-list .compare .title,
+div a.product-wishlist .title,
+div a.product-compare .title {
+	position: absolute;
+	font-size: 10px;
+	line-height: 10px;
+	color: #888888;
+	text-align: center;
+	padding: 3px;
+	background: #ffffff;
+	border: 1px solid #dddddd;
+	top: -25px;
+	left: 12px;
+	margin-left: -41px;
+	width: 80px;
+	display: none;
+	z-index: 999;
+	text-indent: 0px;
+	font-weight: normal;
+}
+.product-grid .wishlist a,
+.product-list .wishlist a,
+div a.product-wishlist {
+	padding: 0px 0px 0px 0px;
+	display: block;
+	background: url(/image/wishlist-compare.png) top left no-repeat;
+	text-indent: -9999px;
+	height: 24px;
+	width: 25px;
+}
+.product-grid .wishlist a:hover,
+.product-grid .wishlist a:active,
+.product-list .wishlist a:hover,
+.product-list .wishlist a:active,
+div a.product-wishlist:hover,
+div a.product-wishlist:active {
+	background: url(/image/wishlist-compare.png) bottom left no-repeat;
+}
+.product-grid .compare a,
+.product-list .compare a,
+div a.product-compare {
+	padding: 0px 0px 0px 0px;
+	display: block;
+	background: url(/image/wishlist-compare.png) top right no-repeat;
+	text-indent: -9999px;
+	height: 24px;
+	width: 25px;
+}
+.product-grid .compare a:hover,
+.product-grid .compare a:active,
+.product-list .compare a:hover,
+.product-list .compare a:active,
+div a.product-compare:hover,
+div a.product-compare:active {
+	background: url(/image/wishlist-compare.png) bottom right no-repeat;
+}
+div a.product-wishlist,
+div a.product-compare {
+	display: inline-block !important;
+	margin-top: 2px;
+}
+/* IE Specific Styling */
+.product-grid .wishlist,
+.product-grid .compare,
+.product-list .wishlist,
+.product-list .compare,
+div a.product-wishlist,
+div a.product-compare {
+	*display: block;
+	*float: left;
+}
+.product-info .cart {
+	overflow: visible;
+	display: block;
+}
+.product-grid div:after,
+.product-info .cart:after {
+	*content: "."; 
+	*display: block;
+	*height: 0px;
+	*clear: both;
+	*visibility: hidden;
+	*overflow: hidden;
+}
